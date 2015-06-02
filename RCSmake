@@ -1,0 +1,12 @@
+include $(MAKESRC)
+
+default: update
+
+update: $(RCS_FILES) $(MAKE_FILES)
+
+co:
+	@echo "Copying all Source at revision $(COFLAGS)"
+	@tmp=/tmp/rcs$$.tmp; for i in $(RCS_FILES) $(MAKE_FILES); do $(CO) $(COFLAGS) -p -q $$i > $$tmp; [ $$? = 0 -a -f $$i ] && { cmp -s $$i $$tmp; [ $$? != 0 ] && mv $$tmp $$i; } ; done; $(RM) $$tmp
+	
+# This rule forces all source to be strictly dependent on the RCS
+$(RCS_FILES) $(MAKE_FILES): %: RCS/%,v ; $(CO) $(COFLAGS) $< $@

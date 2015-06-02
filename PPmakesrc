@@ -1,0 +1,136 @@
+include MAKEsrc
+
+EXEC = pp
+ALIAS = PP
+
+SHAREDC_FILES = \
+	Psftable.c \
+	ShippingRev.c \
+	X11_func.c \
+	IsPtInElement.c \
+	add_inter.c \
+	build_inter.c \
+	byte_swap.c \
+	compute_x_y.c \
+	coor.c \
+	draw_arc.c \
+	frame_aux.c \
+	frame_io.c \
+	get_page.c \
+	interface.c \
+	interfer_util.c \
+	lc_utils.c \
+	llist.c \
+	lmt_extern.c \
+	load_graphics_file.c \
+	lpm_client.c \
+	lpm_xdr.c \
+	map_util.c \
+	memshell.c \
+	menu_func.c \
+	merge_ele.c \
+	ml_util.c \
+	mp_style_io.c \
+	msg_parse.c \
+	p_lib.c \
+	page_ele.c \
+	que.c \
+	read_line_def.c \
+	rel_to_abs.c \
+	relation.c \
+	rotate.c \
+	set_sigs.c \
+	shape_bearoff.c \
+	trace_def.c \
+	trans.c \
+	tree.c \
+	window.c \
+	wn_cleanup.c  \
+
+H_FILES = \
+	Psftable.h \
+	X11_rounded.h \
+	X11_typedefs.h \
+	bit_field.h \
+	byte_swap.h \
+	color.h \
+	frame.h \
+	gs_header.h \
+	image.h \
+	interfer.h \
+	line_def.h \
+	link_util.h \
+	list_control.h \
+	llist.h \
+	locks.h \
+	lpm.h \
+	lpm_server.h \
+	map.h \
+	memshell.h \
+	menu_frame.h \
+	menus.h \
+	mp_styles.h \
+	msg_parse.h \
+	new_frame.h \
+	noproto.h \
+	p_lib.h \
+	penta.h \
+	poly.h \
+	preview.h \
+	prototypes.h \
+	psjob.h \
+	px_header.h \
+	que.h \
+	rel_data.h \
+	rotation.h \
+	signal.h \
+	socket.h \
+	specs.h \
+	traces.h \
+	trans.h \
+	tree.h \
+	txfile.h \
+	widget_list.h \
+	window.h \
+
+F_FILES = \
+	clip.f \
+	fr_shape.f \
+	frame.f \
+	interfer.f \
+	list_control.f \
+	lmt.f \
+	locks.f \
+	map.f \
+	mem_lay.f \
+	psjob.f \
+	specs.f \
+
+PPC_FILES = \
+	psbuild.c \
+	psdtext.c \
+	psemu.c \
+	psencap.c \
+	psfolio.c \
+	psgraphic.c \
+	pskmds.c \
+	psmpu_dprint.c \
+	psmpu_lprint.c \
+	psmpu_main.c \
+	psmpu_tprint.c \
+	psparse.c \
+	psprint.c \
+	pssp_col.c \
+	psstyle1.c \
+	pstabs.c \
+	psutils.c \
+	psvidlst.c \
+	ps_pdfmarks.c \
+	psxykmds.c \
+
+C_FILES = $(SHAREDC_FILES) $(PPC_FILES)
+
+ifndef MAKESRC
+include MAKERULES
+endif
+

@@ -1,0 +1,67 @@
+OSNAME = $(shell uname -s)
+ifeq ($(OSNAME),SunOS)
+OSNAME = sunos
+OSREV = $(shell expr `uname -r` : '..\(.*\)')
+else
+ifeq ($(OSNAME),Linux)
+OSNAME = linux
+OSREV = 1
+endif
+endif
+
+LANG = english
+
+CC = gcc
+LD = gcc
+CO = co
+X11REV = -DX11R5
+LINT = lint
+UIL = uil
+RM = rm -f
+LIBCURSES = -lcurses
+
+ifeq ($(OSNAME),sunos)
+LDLIBS = -lm -lgen -lresolv -lsocket -lnsl -lelf
+ifeq ($(OSREV),8)
+CC = gcc7
+endif
+else
+ifeq ($(OSNAME),linux)
+LIBCURSES = -lncurses
+LDLIBS = -lm
+endif
+endif
+
+ifeq ($(OSNAME),sunos)
+OPTFLAG = -O -pipe 
+else
+OPTFLAG = -pipe
+endif
+#OPTFLAG = $(OPTFLAG) -g
+
+TRACES = -DTRACE
+DEFINES = -Wall -DOS_$(OSNAME)=$(OSREV) $(TRACES) $(X11REV) $(LOCAL_DEFINES)
+ifeq ($(OSNAME),sunos)
+ifeq ($(OSREV),8)
+DEFINES = -Wno-main -DOS_$(OSNAME)=$(OSREV) $(TRACES) $(X11REV) $(LOCAL_DEFINES)
+endif
+endif
+ifeq ($(OSNAME),linux)
+DEFINES = -Wall -Wno-main -DOS_$(OSNAME)=$(OSREV) $(TRACES) $(X11REV) $(LOCAL_DEFINES)
+endif
+CFLAGS = $(OPTFLAG) $(DEFINES)
+#CFLAGS = $(OPTFLAG) $(TRACES) $(DEFINES)
+COFLAGS =
+LINTFLAGS = $(DEFINES)
+
+ifdef TRACES
+TRACES_UIL = traces.uil
+endif
+
+MAKE_FILES = $(ALIAS)makesrc MAKEsrc MAKERULES RCSmake GNUmakefile
+DIROBJS = $(addprefix OBJS/,$(OBJ_FILES))
+RCS_FILES = $(H_FILES) $(F_FILES) $(C_FILES)
+OBJ_FILES = $(C_FILES:.c=.o)
+SYS_LIBS = $(LDLIBS)
+ALL = $(EXEC)
+

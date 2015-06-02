@@ -1,0 +1,139 @@
+OBJS/Psftable.o: Psftable.c p_lib.h penta.h byte_swap.h memshell.h Psftable.h
+OBJS/ShippingRev.o: ShippingRev.c
+OBJS/X11_func.o: X11_func.c p_lib.h penta.h byte_swap.h memshell.h \
+ X11_typedefs.h X11_rounded.h poly.h
+OBJS/IsPtInElement.o: IsPtInElement.c window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h X11_typedefs.h X11_rounded.h \
+ interfer.h interfer.f menu_frame.h traces.h
+OBJS/add_inter.o: add_inter.c p_lib.h penta.h byte_swap.h memshell.h \
+ interfer.h interfer.f menu_frame.h traces.h
+OBJS/build_inter.o: build_inter.c p_lib.h penta.h byte_swap.h memshell.h \
+ interfer.h interfer.f menu_frame.h clip.f frame.h traces.h
+OBJS/byte_swap.o: byte_swap.c p_lib.h penta.h byte_swap.h memshell.h
+OBJS/compute_x_y.o: compute_x_y.c window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h interfer.h interfer.f \
+ menu_frame.h frame.h rel_data.h lmt.f
+OBJS/coor.o: coor.c window.h p_lib.h penta.h byte_swap.h memshell.h que.h \
+ image.h llist.h map.h interfer.h interfer.f menu_frame.h clip.f traces.h
+OBJS/draw_arc.o: draw_arc.c window.h p_lib.h penta.h byte_swap.h memshell.h \
+ que.h image.h llist.h map.h
+OBJS/frame_aux.o: frame_aux.c window.h p_lib.h penta.h byte_swap.h memshell.h \
+ que.h image.h llist.h map.h menu_frame.h
+OBJS/frame_io.o: frame_io.c window.h p_lib.h penta.h byte_swap.h memshell.h \
+ que.h image.h llist.h map.h menus.h menu_frame.h frame.h locks.h \
+ rel_data.h specs.h traces.h widget_list.h list_control.h list_control.f
+OBJS/get_page.o: get_page.c window.h p_lib.h penta.h byte_swap.h memshell.h \
+ que.h image.h llist.h map.h rel_data.h traces.h lpm.h list_control.h \
+ list_control.f mem_lay.f lmt.f frame.h map.f
+OBJS/interface.o: interface.c rel_data.h window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h interfer.h interfer.f \
+ menu_frame.h frame.h traces.h lmt.f
+OBJS/interfer_util.o: interfer_util.c X11_rounded.h rel_data.h window.h \
+ p_lib.h penta.h byte_swap.h memshell.h que.h image.h llist.h map.h \
+ interfer.h interfer.f menu_frame.h px_header.h frame.h lmt.f
+OBJS/lc_utils.o: lc_utils.c p_lib.h penta.h byte_swap.h memshell.h noproto.h \
+ mem_lay.f list_control.h list_control.f llist.h traces.h
+OBJS/llist.o: llist.c p_lib.h penta.h byte_swap.h memshell.h llist.h traces.h
+OBJS/lmt_extern.o: lmt_extern.c penta.h frame.h
+OBJS/load_graphics_file.o: load_graphics_file.c p_lib.h penta.h byte_swap.h \
+ memshell.h image.h que.h px_header.h window.h llist.h map.h
+OBJS/lpm_client.o: lpm_client.c noproto.h socket.h p_lib.h penta.h byte_swap.h \
+ memshell.h lpm.h lpm_server.h que.h
+OBJS/lpm_xdr.o: lpm_xdr.c p_lib.h penta.h byte_swap.h memshell.h lpm.h \
+ lpm_server.h que.h
+OBJS/map_util.o: map_util.c window.h p_lib.h penta.h byte_swap.h memshell.h \
+ que.h image.h llist.h map.h link_util.h list_control.h list_control.f \
+ frame.h traces.h rel_data.h map.f mem_lay.f
+OBJS/memshell.o: memshell.c p_lib.h penta.h byte_swap.h memshell.h
+OBJS/menu_func.o: menu_func.c rel_data.h window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h frame.h locks.h menu_frame.h \
+ menus.h traces.h widget_list.h lmt.f
+OBJS/merge_ele.o: merge_ele.c window.h p_lib.h penta.h byte_swap.h memshell.h \
+ que.h image.h llist.h map.h interfer.h interfer.f menu_frame.h clip.f \
+ traces.h lmt.f
+OBJS/ml_util.o: ml_util.c p_lib.h penta.h byte_swap.h memshell.h \
+ list_control.h list_control.f llist.h mem_lay.f traces.h
+OBJS/mp_style_io.o: mp_style_io.c p_lib.h penta.h byte_swap.h memshell.h \
+ window.h que.h image.h llist.h map.h menu_frame.h frame.h mp_styles.h \
+ lmt.f interfer.f
+OBJS/msg_parse.o: msg_parse.c p_lib.h penta.h byte_swap.h memshell.h \
+ msg_parse.h
+OBJS/p_lib.o: p_lib.c p_lib.h penta.h byte_swap.h memshell.h traces.h
+OBJS/page_ele.o: page_ele.c rel_data.h window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h frame.h link_util.h traces.h \
+ lmt.f
+OBJS/que.o: que.c p_lib.h penta.h byte_swap.h memshell.h que.h
+OBJS/read_line_def.o: read_line_def.c line_def.h penta.h
+OBJS/rel_to_abs.o: rel_to_abs.c window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h interfer.h interfer.f \
+ menu_frame.h rel_data.h frame.h lmt.f
+OBJS/relation.o: relation.c p_lib.h penta.h byte_swap.h memshell.h \
+ menu_frame.h interfer.h interfer.f frame.h
+OBJS/rotate.o: rotate.c rel_data.h window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h rotation.h frame.h interfer.h \
+ interfer.f menu_frame.h lmt.f
+OBJS/set_sigs.o: set_sigs.c p_lib.h penta.h byte_swap.h memshell.h
+OBJS/shape_bearoff.o: shape_bearoff.c window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h traces.h rel_data.h frame.h lmt.f \
+ px_header.h gs_header.h
+OBJS/trace_def.o: trace_def.c
+OBJS/trans.o: trans.c trans.h tree.h prototypes.h traces.h
+OBJS/tree.o: tree.c tree.h
+OBJS/window.o: window.c que.h penta.h line_def.h
+OBJS/wn_cleanup.o: wn_cleanup.c window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h link_util.h color.h traces.h
+OBJS/psbuild.o: psbuild.c p_lib.h penta.h byte_swap.h memshell.h frame.h \
+ list_control.h list_control.f llist.h mem_lay.f rel_data.h window.h \
+ que.h image.h map.h psjob.h line_def.h Psftable.h psjob.f
+OBJS/psdtext.o: psdtext.c signal.h p_lib.h penta.h byte_swap.h memshell.h \
+ frame.h rel_data.h window.h que.h image.h llist.h map.h psjob.h \
+ line_def.h Psftable.h psjob.f lpm.h list_control.h list_control.f
+OBJS/psemu.o: psemu.c p_lib.h penta.h byte_swap.h memshell.h psjob.h window.h \
+ que.h image.h llist.h map.h line_def.h Psftable.h psjob.f
+OBJS/psencap.o: psencap.c penta.h noproto.h p_lib.h byte_swap.h memshell.h \
+ traces.h psjob.h window.h que.h image.h llist.h map.h line_def.h \
+ Psftable.h psjob.f lpm.h frame.h rel_data.h
+OBJS/psfolio.o: psfolio.c p_lib.h penta.h byte_swap.h memshell.h psjob.h \
+ window.h que.h image.h llist.h map.h line_def.h Psftable.h psjob.f
+OBJS/psgraphic.o: psgraphic.c p_lib.h penta.h byte_swap.h memshell.h psjob.h \
+ window.h que.h image.h llist.h map.h line_def.h Psftable.h psjob.f \
+ rel_data.h lpm.h
+OBJS/pskmds.o: pskmds.c p_lib.h penta.h byte_swap.h memshell.h psjob.h \
+ window.h que.h image.h llist.h map.h line_def.h Psftable.h psjob.f \
+ frame.h rel_data.h
+OBJS/psmpu_dprint.o: psmpu_dprint.c window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h mp_styles.h psjob.h line_def.h \
+ Psftable.h psjob.f list_control.h list_control.f
+OBJS/psmpu_lprint.o: psmpu_lprint.c p_lib.h penta.h byte_swap.h memshell.h \
+ traces.h psjob.h window.h que.h image.h llist.h map.h line_def.h \
+ Psftable.h psjob.f frame.h rel_data.h
+OBJS/psmpu_main.o: psmpu_main.c window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h list_control.h list_control.f \
+ mp_styles.h traces.h psjob.h line_def.h Psftable.h psjob.f
+OBJS/psmpu_tprint.o: psmpu_tprint.c p_lib.h penta.h byte_swap.h memshell.h \
+ psjob.h window.h que.h image.h llist.h map.h line_def.h Psftable.h \
+ psjob.f frame.h rel_data.h txfile.h
+OBJS/psparse.o: psparse.c psjob.h window.h p_lib.h penta.h byte_swap.h \
+ memshell.h que.h image.h llist.h map.h line_def.h Psftable.h psjob.f \
+ rel_data.h list_control.h list_control.f mem_lay.f traces.h
+OBJS/psprint.o: psprint.c p_lib.h penta.h byte_swap.h memshell.h psjob.h \
+ window.h que.h image.h llist.h map.h line_def.h Psftable.h psjob.f \
+ msg_parse.h traces.h lpm.h list_control.h list_control.f
+OBJS/pssp_col.o: pssp_col.c p_lib.h penta.h byte_swap.h memshell.h psjob.h \
+ window.h que.h image.h llist.h map.h line_def.h Psftable.h psjob.f
+OBJS/psstyle1.o: psstyle1.c p_lib.h penta.h byte_swap.h memshell.h psjob.h \
+ window.h que.h image.h llist.h map.h line_def.h Psftable.h psjob.f \
+ frame.h rel_data.h
+OBJS/pstabs.o: pstabs.c p_lib.h penta.h byte_swap.h memshell.h psjob.h \
+ window.h que.h image.h llist.h map.h line_def.h Psftable.h psjob.f
+OBJS/psutils.o: psutils.c p_lib.h penta.h byte_swap.h memshell.h psjob.h \
+ window.h que.h image.h llist.h map.h line_def.h Psftable.h psjob.f \
+ rel_data.h frame.h
+OBJS/psvidlst.o: psvidlst.c p_lib.h penta.h byte_swap.h memshell.h psjob.h \
+ window.h que.h image.h llist.h map.h line_def.h Psftable.h psjob.f \
+ msg_parse.h lpm.h
+OBJS/ps_pdfmarks.o: ps_pdfmarks.c penta.h noproto.h p_lib.h byte_swap.h \
+ memshell.h traces.h psjob.h window.h que.h image.h llist.h map.h \
+ line_def.h Psftable.h psjob.f lpm.h prototypes.h
+OBJS/psxykmds.o: psxykmds.c p_lib.h penta.h byte_swap.h memshell.h psjob.h \
+ window.h que.h image.h llist.h map.h line_def.h Psftable.h psjob.f

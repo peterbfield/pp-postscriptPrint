@@ -1,0 +1,60 @@
+
+alias = $(shell echo $(ALIAS) | tr '[A-Z]' '[a-z]')
+ifeq "$(alias)" "$(EXEC)"
+alias =
+endif
+
+ccenter_src:
+	@echo "Starting"
+	%load $(C_FILES)
+
+$(EXEC): $(DIROBJS) ; (cd OBJS; $(LD) $(LDFLAGS) -o ../$@ $(LDCRTS) $(OBJ_FILES) $(SYS_LIBS))
+
+all: $(ALL)
+
+ifneq "$(strip $(alias))" ""
+$(alias) : all
+endif
+
+update co: RCSmake ; @$(MAKE) -f $< MAKESRC=$(ALIAS)makesrc $@
+
+clean: ; $(RM) $(EXEC) $(UID_FILES) $(ALIAS)depend OBJS/*.o *.sh TAGS tags *~ \#*\#
+
+rcsclean: clean
+	@echo "Deleting any unchanged RCS files..."
+	@tmp=/tmp/rcs$$.tmp; for i in $(RCS_FILES) $(ALIAS)makesrc; do [ -f $$i ] || continue; \
+		if co -p -q $$i > $$tmp && cmp -s $$i $$tmp; then \
+			[ "`rlog -R -L -l$$LOGNAME $$i`" != "" ] && rcs -u -q $$i; rm -f $$i; \
+		else echo "*** checkin $$i by hand ***"; fi; done; rm -f $$tmp
+	#$(CO) MAKEsrc MAKERULES GNUmakefile
+
+etags : TAGS
+
+ctags : tags
+
+TAGS: $(H_FILES) $(C_FILES) ; @for i in $^; do etags -tea $$i; echo "Appended $$i"; done
+
+tags: $(H_FILES) $(C_FILES) ; @for i in $^; do ctags -wtaf $@ $$i; done ; echo "  Done"
+
+rcsout: $(RCS_FILES) $(MAKE_FILES) ;
+	@for i in `rlog -L -R $^` ; do echo "`basename $$i ,v`: `rlog -L -h $$i | sed -n 's|locks: *\([^;]*\);.*|\1|p'`" ;done
+
+depend: $(C_FILES) $(H_FILES) $(F_FILES) $(UIL_FILES) $(AUX_UIL_FILES)
+	@$(RM) .depend
+	$(CC) -c -MM -DOS_$(OSNAME)=$(OSREV) $(TRACES) $(X11REV) $(C_FILES) > .depend
+	@sed '/:/s|^|OBJS/|' .depend > $(ALIAS)depend; $(RM) .depend
+ifdef UIL_FILES
+	@for i in $(UIL_FILES) $(AUX_UIL_FILES) ; do \
+		deps=`sed "/^include file/!d;s|.*\'\(.*\)\'.*|\1|;/XmAppl/d;/^ *$$/d" $$i | tr '\012' ' '`; \
+		[ -z "$$deps" ] || echo "`basename $$i .uil`.uid: $$deps" >> $(ALIAS)depend; \
+	done
+endif
+	@echo "make $@ complete"
+
+.PHONY: clean rcsclean tags TAGS depend update all $(alias)
+
+%.uid: %.uil ; $(UIL) $(UILFLAGS) -o $@ $<
+
+OBJS/%.o: %.c ; $(CC) $(CFLAGS) -c $< -o $@
+
+include $(ALIAS)depend

@@ -1,0 +1,96 @@
+AddShape			ADDSHAPE	local/bin/ghostscript	local/bin
+aupi				AUPI		local/bin
+aupicvt				AUPICVT		local/bin
+aupimn				AUPIMN		local/bin
+av2mac				AV2MAC		cur_rev
+avxpc				AVXPC		local/bin
+bpm					BPM			cur_rev
+bspell_bin			BSPELLBIN	local/bin
+buildct				BUILDCT		local/bin
+cklist				CKLIST		local/bin
+ckregex				CKREGEX		local/bin
+designmaster		DM			cur_rev
+dictionary_update	DICTIONARY	local/bin
+diction_update		DICTION		local/bin
+dictprint			DICTPRINT	local/bin
+EditMaster			EM			cur_rev
+eqdb				EQDB		local/bin
+et					ET			cur_rev			local/bin
+export_penta		EXPORT_PENTA local/bin
+facs				FACS		local/bin
+fam					FAM			local/bin
+famcvt				FAMCVT		local/bin
+fexpr				FEXPR		local/bin
+fn					FN			local/bin
+fnkncvt				FNKNCVT		local/bin
+fnx					FNX			local/bin
+foprint				FOPRINT		local/bin
+genstyletree		GENSTYLETREE	cur_rev		local/bin
+gentag_update		GENTAG		local/bin
+gio					GIO			cur_rev
+HandJ				HNJ			cur_rev
+import				IMPORT		cur_rev			local/bin
+issgml				ISSGML		cur_rev
+keyb				KEYB		local/bin
+kn					KN			local/bin
+layrpt				LAYRPT		local/bin
+lpm					LPM			cur_rev
+lpminfo 			LPMINFO		cur_rev			local/bin
+lpmq				LPMQ		cur_rev
+lpmquery			LQ			cur_rev			local/bin
+lpmreset			LPMSET		cur_rev			local/bin
+lu					LU			cur_rev			local/bin
+lwf					LWF			local/bin
+mac2av				MAC2AV		local/bin
+mactopfb			MACTOPFB	local/bin
+manps_bin			MANPSBIN	local/bin
+MasterPage			MP			cur_rev
+mvsh				MVSH		local/bin
+ovs_update			OVS_UPDATE	local/bin
+ovscvt				OVSCVT		local/bin
+pack_pixel			PACK_PIXEL	local/bin
+pcnfsd				PCNFSD		local/bin
+PCServer			PCS			cur_rev
+pentamenus			PMENUS		local/bin
+pfbtoascii			PFBTOASCII	local/bin
+Pfsd				PFSD		cur_rev
+pil					PIL			cur_rev
+pixel_header		PIXEL_HEADER	cur_rev
+pixel_mod           PIXEL       cur_rev
+pp					PP			cur_rev
+pp_to_eps			PP_TO_EPS	cur_rev
+prfilter			PRFILTER	local/bin
+psftf				PSFTF		local/bin
+pspell_bin			PSPELLBIN	local/bin
+rag					RAG			local/bin
+scank				SCANK
+script				SCRIPT		
+SetBbox				SETBBOX		local/bin/ghostscript	local/bin
+SetTight			SETTIGHT	local/bin/ghostscript	local/bin
+sfed				SFED		local/bin
+sgmle				SGMLE		cur_rev			local/bin
+SgmlMerge			SGMLMERGE	cur_rev
+sgmlp				SGMLP		cur_rev			local/bin
+sgmlpub				SGMLPUB
+SGMLTagList			SGMLTAGLIST	cur_rev
+sl					SL			local/bin
+splitfile			SPLITFILE	local/bin
+sprint				SPRINT		local/bin
+sysconf				SYSCONF		local/bin
+sysstd				SYSSTD		local/bin
+t1_bitmap			T1_BITMAP	cur_rev
+t1shape				T1SHAPE		local/bin
+tagtotext			TAGTOTEXT	cur_rev
+tcltk				TCLTK
+tpsend				TPSEND		local/bin
+TranslateBbox		TRANSBBOX	local/bin/ghostscript	local/bin
+trunc				TRUNC		local/bin
+ts					TS			cur_rev			local/bin
+txcontx2			TXCONTX2
+txdisp				TXDISP		local/bin
+txheader			TXHEADER	cur_rev
+txoverlap			TXOVERLAP	local/bin
+txprint				TXPRINT		local/bin
+untrunc				UNTRUNC		local/bin
+usft				USFT		local/bin
+vpfm				VPFM		local/bin
